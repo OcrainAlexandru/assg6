@@ -1,230 +1,130 @@
-/* Apply styles to the nav-bar class */
-.nav-bar {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-  }
-  
-  /* Apply styles to the content class */
-  .content {
+body {
+    font-family: 'Comic Sans MS', cursive;
     margin: 20px;
-  }
-  
-  /* Apply styles to the footer class */
-  .footer {
-    background-color: #333;
-    color: #fff;
+    padding: 0;
+    background-color: #ffcccb; /* Changed background color to a wacky pink */
+    color: #4CAF50;
+}
+
+header {
     text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
+    margin-bottom: 20px;
+    color: #ff69b4; /* Changed header color to a vibrant pink */
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+.crazy-iframe,
+.styled-div {
     width: 100%;
-  }
-  
-  /* Descendant selector: Apply styles to 'a' elements within the nav-bar class */
-  .nav-bar a {
-    color: #fff;
+    max-width: 800px;
+    margin: 0 auto;
+    display: block;
+}
+
+.styled-div {
+    height: 200px;
+    background-color: #ffd700; /* Changed styled-div color to gold */
+    padding: 20px;
+    box-sizing: border-box;
+    border: 5px dotted #00bfff; /* Added a dotted border */
+    border-radius: 50px; /* Made the border radius more exaggerated */
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.highlighted-text {
+    color: #8a2be2; /* Changed highlighted text color to blue-violet */
+    font-weight: bold;
+}
+
+hr {
+    margin: 40px 0;
+    border: 2px dashed #8b4513; /* Changed hr border to a dashed pattern */
+}
+
+/* Combinator styles */
+
+/* Descendant Selector */
+.nav-bar ul li a {
+    color: #00ff7f; /* Changed nav-bar link color to spring green */
     text-decoration: none;
-  }
-  
-  /* Child selector: Apply styles to 'li' elements that are direct children of the ul within the nav-bar class */
-  .nav-bar > ul > li {
-    display: inline-block;
-    margin-right: 10px;
-  }
-  
-  /* Adjacent sibling selector: Apply styles to the content class that directly follows the nav-bar class */
-  .nav-bar + .content {
-    border-top: 1px solid #333;
-  }
-  
-  /* Descendant selector: Apply styles to 'p' elements within the content class */
-  .content p {
-    font-size: 16px;
-  }
-  
-  /* Descendant selector: Apply styles to 'p' elements within the footer class */
-  .footer p {
-    margin: 0;
-  }
-  
-  /* Additional styles for better visibility */
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-  }
-  
-  /* Style the links within the footer */
-  .footer a {
-    color: #fff;
-    text-decoration: underline;
-  }
-  
+}
+
+/* Child Selector */
+.content > h2 {
+    color: #9932cc; /* Changed content h2 color to dark orchid */
+}
+
+/* Adjacent Sibling Selector */
+.content + section > h2 {
+    color: #ff4500; /* Changed adjacent h2 color to orange-red */
+}
 
 /* Pseudo-classes */
-/* Apply styles to the first 'li' element within the nav-bar class */
 .nav-bar li:first-child {
-    font-weight: bold;
-  }
-  
-  /* Apply styles to the last 'li' element within the nav-bar class */
-  .nav-bar li:last-child {
-    margin-right: 0;
-  }
-  
-  /* Apply styles to 'a' elements within the nav-bar class when hovered */
-  .nav-bar a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Apply styles to 'p' elements within the content class when the parent is hovered */
-  .content:hover p {
-    color: #ff4500; /* Change text color to orange on hover */
-  }
-  
-  /* Pseudo-elements */
-  /* Add a double border above and below the content class */
-  .content::before,
-  .content::after {
-    content: "";
-    display: block;
-    height: 2px;
-    background-color: #333;
-    margin: 10px 0;
-  }
-  
-  /* Style the first line of the content class */
-  .content::first-line {
-    font-weight: bold;
-  }
-  
-  /* Style the first letter of each paragraph within the content class */
-  .content p::first-letter {
-    font-size: 24px;
-    color: #ff4500; /* Change the color of the first letter */
-  }
-  
-  /* Style the content within the footer class using the before pseudo-element */
-  .footer::before {
-    content: "Website Footer";
-    display: block;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #fff;
-  }
-  
-  /* Additional styles... */
-  
-/* Visibility property */
-/* Hide the content class by default */
-.content {
-    visibility: hidden;
-  }
-  
-  /* Show the content class when the parent (body) is hovered */
-  body:hover .content {
-    visibility: visible;
-  }
-  
-  /* Opacity property */
-  /* Apply a low opacity to the footer class */
-  .footer {
-    opacity: 0.8;
-  }
-  
-  /* Display property */
-  /* Hide the footer class on screens smaller than 600px */
-  @media (max-width: 600px) {
-    .footer {
-      display: none;
-    }
-  }
-  
-  /* Additional styles... */
-  
-/* Padding and margin for divs */
-/* Add padding to the nav-bar class */
-.nav-bar {
-    padding: 15px;
-  }
-  
-  /* Add margin to the content class */
-  .content {
-    margin: 20px;
-    padding: 15px;
-  }
-  
-  /* Add padding to the footer class */
-  .footer {
-    padding: 15px;
-  }
-  
-  /* Image filter for the content image */
-  .content img {
-    filter: grayscale(50%); /* Convert image to grayscale */
-  }
-  
-  /* Additional styles... */
-  
-  /* CSS Grid and Flexbox */
-  /* Apply CSS Grid to the body */
-  body {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr; /* Three columns layout */
-  }
-  
-  /* Apply Flexbox to the nav-bar class */
-  .nav-bar {
-    display: flex;
-    justify-content: space-between; /* Space evenly between child elements */
-  }
-  
-  /* Apply Flexbox to the footer class */
-  .footer {
-    display: flex;
-    align-items: center; /* Center align items vertically */
-    justify-content: center; /* Center align items horizontally */
-  }
-  
-  /* Additional styles for better visibility */
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-  }
-  
-  /* Style the links within the footer */
-  .footer a {
-    color: #fff;
-    text-decoration: underline;
-  }
+    font-weight: bolder; /* Made the font weight bolder */
+}
 
-/* Animations and interactions */
-/* Apply a fade-in effect to the content class */
+.content p:last-child {
+    font-style: oblique; /* Changed font style to oblique */
+}
+
+.styled-div:hover {
+    background-color: #87ceeb; /* Changed styled-div background color on hover */
+    opacity: 0.8;
+}
+
+/* Target the second section */
+.content:nth-child(2) {
+    background-color: #ffebcd; /* Changed background color of the second section */
+}
+
+/* Pseudo-elements */
+.content::before {
+    content: "⇨"; /* Changed content before pseudo-element content */
+    color: #6495ed; /* Changed content before pseudo-element color to cornflower blue */
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.content::after {
+    content: "⇦"; /* Changed content after pseudo-element content */
+    color: #6495ed; /* Changed content after pseudo-element color to cornflower blue */
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.styled-div p::first-line {
+    font-size: 18px;
+    color: #e74c3c;
+}
+
+.content p::first-letter {
+    font-size: 24px;
+    color: #27ae60;
+}
+
+/* Added padding for the nav-bar */
+.nav-bar {
+    padding: 20px; /* Added padding for a wackier look */
+}
+
+/* Added margin for the content */
 .content {
-    animation: fadeIn 1.5s ease-in-out;
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Hover effect on the nav-bar links */
-  .nav-bar a {
-    transition: color 0.3s ease-in-out;
-  }
-  
-  .nav-bar a:hover {
-    color: #ff4500; /* Change text color on hover */
-  }
-  
-  /* Bootstrap or Tailwind components can be added here */
-  
-  /* Additional styles... */
-  
+    margin: 20px;
+}
+
+/* Image filters */
+.crazy-iframe img {
+    filter: grayscale(50%);
+}
+
+.styled-div img {
+    filter: brightness(70%);
+}
